@@ -1,4 +1,4 @@
-package local.uniclog;
+package local.uniclog.pw;
 
 public class Response {
     private String version = "1.0";

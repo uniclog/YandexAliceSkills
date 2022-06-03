@@ -1,4 +1,4 @@
-package local.uniclog;
+package local.uniclog.pw;
 
 import java.util.Map;
 
