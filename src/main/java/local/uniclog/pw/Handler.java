@@ -19,31 +19,34 @@ public class Handler implements Function<Request, Response> {
         ZonedDateTime moscow = now.withZoneSameInstant(ZoneId.of("Europe/Moscow"));
 
         String cmd = String.format("%s", command);
-        if (cmd.toLowerCase().contains("завтра")) {
-            return getAnswer(moscow.getDayOfMonth() + 1, "Завтра");
-        }
-        return getAnswer(moscow.getDayOfMonth(), "Сегодня");
+        return getAnswer(EventMap.parseDay(cmd, moscow.getDayOfMonth()), cmd);
     }
 
-    private static String getAnswer(int dayOfMonth, String startWith) {
-        var events = EventMap.getEventMap();
-        String event = events.get(dayOfMonth);
-        switch (event) {
+    private static String getAnswer(int dayOfMonth, String command) {
+        var events = EventMap.eventMap();
+        DataPair event = events.getOrDefault(dayOfMonth, new DataPair("", ""));
+        String answer;
+        switch (event.getEvent()) {
             case "Д": {
-                event = "доспех";
+                answer = "доспех";
                 break;
             }
             case "О": {
-                event = "ор+ужие";
+                answer = "ор+ужие";
                 break;
             }
             case "Р": {
-                event = "рел+иквии";
+                answer = "рел+иквии";
                 break;
             }
             default:
-                event = "Я не зн+аю";
+                return "У меня таакой информации нет";
         }
-        return startWith + " +ежа в " + event;
+        return getStartWith(command, event.getText()) + " +ежа в " + answer;
+    }
+    private static String getStartWith(String command, String answer) {
+         if (command.equals("завтра")) return "завтра";
+         if (command.equals("сегодня")) return  "сегодня";
+         return answer;
     }
 }

@@ -1,46 +1,89 @@
 package local.uniclog.pw;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class EventMap {
     private EventMap() {
         throw new IllegalStateException("Utility class");
     }
 
-    static Map<Integer, String> getEventMap() {
-        Map<Integer, String> eventMap = new HashMap<>();
-        eventMap.put(1, "Д");
-        eventMap.put(2, "Д");
-        eventMap.put(3, "Д");
-        eventMap.put(4, "Д");
-        eventMap.put(5, "Д");
-        eventMap.put(6, "Д");
-        eventMap.put(7, "Д");
-        eventMap.put(8, "Д");
-        eventMap.put(9, "Д");
-        eventMap.put(10, "О");
-        eventMap.put(11, "О");
-        eventMap.put(12, "О");
-        eventMap.put(13, "О");
-        eventMap.put(14, "О");
-        eventMap.put(15, "О");
-        eventMap.put(16, "О");
-        eventMap.put(17, "О");
-        eventMap.put(18, "О");
-        eventMap.put(19, "Р");
-        eventMap.put(20, "Р");
-        eventMap.put(21, "Р");
-        eventMap.put(22, "Р");
-        eventMap.put(23, "Р");
-        eventMap.put(24, "Р");
-        eventMap.put(25, "Р");
-        eventMap.put(26, "Р");
-        eventMap.put(27, "Р");
-        eventMap.put(28, "О");
-        eventMap.put(29, "Д");
-        eventMap.put(30, "О");
-        eventMap.put(31, "Д");
+    static Map<Integer, DataPair> eventMap() {
+        Map<Integer, DataPair> eventMap = new HashMap<>();
+        eventMap.put(1, new DataPair("Д", "первого"));
+        eventMap.put(2, new DataPair("Р", "второго"));
+        eventMap.put(3, new DataPair("Д", "третьего"));
+        eventMap.put(4, new DataPair("Р", "четвертого"));
+        eventMap.put(5, new DataPair("О", "пятого"));
+        eventMap.put(6, new DataPair("Р", "шестого"));
+        eventMap.put(7, new DataPair("О", "седьмого"));
+        eventMap.put(8, new DataPair("Д", "восьмого"));
+        eventMap.put(9, new DataPair("Р", "девятого"));
+        eventMap.put(10, new DataPair("Д","десятого"));
+        eventMap.put(11, new DataPair("Р","одиннадцатого"));
+        eventMap.put(12, new DataPair("О","двенадцатого"));
+        eventMap.put(13, new DataPair("Р","тринадцатого"));
+        eventMap.put(14, new DataPair("О","четырнадцатого"));
+        eventMap.put(15, new DataPair("Д","пятнадцатого"));
+        eventMap.put(16, new DataPair("Р","шестнадцатого"));
+        eventMap.put(17, new DataPair("Д","семнадцатого"));
+        eventMap.put(18, new DataPair("Р","восемнадцатого"));
+        eventMap.put(19, new DataPair("О","девятнадцатого"));
+        eventMap.put(20, new DataPair("Р","двадцатого"));
+        eventMap.put(21, new DataPair("О","двадцать первого"));
+        eventMap.put(22, new DataPair("Д","двадцать второго"));
+        eventMap.put(23, new DataPair("О","двадцать третьего"));
+        eventMap.put(24, new DataPair("Д","двадцать четвертого"));
+        eventMap.put(25, new DataPair("Р","двадцать пятого"));
+        eventMap.put(26, new DataPair("О","двадцать шестого"));
+        eventMap.put(27, new DataPair("Р","двадцать седьмого"));
+        eventMap.put(28, new DataPair("О","двадцать восьмого"));
+        eventMap.put(29, new DataPair("Д","двадцать девятого"));
+        eventMap.put(30, new DataPair("О","тридцатого"));
+        //eventMap.put(31, new DataPair("Д","тридцать первого"))
         return eventMap;
+    }
+
+    static Integer parseDay(String request, int dayOfMonth) {
+        Map<String, Integer> map = new LinkedHashMap<>();
+        map.put("сегодня", dayOfMonth);
+        map.put("завтра", dayOfMonth + 1);
+        map.put("1", 1);
+        map.put("2", 2);
+        map.put("3", 3);
+        map.put("4", 4);
+        map.put("5", 5);
+        map.put("6", 6);
+        map.put("7", 7);
+        map.put("8", 8);
+        map.put("9", 9);
+        map.put("10", 10);
+        map.put("11", 11);
+        map.put("12", 12);
+        map.put("13", 13);
+        map.put("14", 14);
+        map.put("15", 15);
+        map.put("16", 16);
+        map.put("17", 17);
+        map.put("18", 18);
+        map.put("19", 19);
+        map.put("20", 20);
+        map.put("21", 21);
+        map.put("22", 22);
+        map.put("23", 23);
+        map.put("24", 24);
+        map.put("25", 25);
+        map.put("26", 26);
+        map.put("27", 27);
+        map.put("28", 28);
+        map.put("29", 29);
+        map.put("30", 30);
+        map.put("31", 30);
+
+        AtomicInteger answer = new AtomicInteger(0);
+        map.forEach((prediction, value) -> answer.set((request.contains(prediction)) ? value : answer.get()));
+        return answer.get();
     }
 }

@@ -8,6 +8,10 @@ public class Response {
         this.response = new ResponseBody(200, String.format("%s", answer));
     }
 
+    public String getResponseText() {
+        return response.text;
+    }
+
     private static class ResponseBody {
         Boolean end_session;
         String tts;
@@ -17,7 +21,7 @@ public class Response {
         public ResponseBody(int statusCode, String tts) {
             this.statusCode = statusCode;
             this.tts = tts;
-            this.text = tts;
+            this.text = tts.replace("+", "");
             this.end_session = true;
         }
     }
