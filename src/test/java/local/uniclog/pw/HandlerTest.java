@@ -22,7 +22,7 @@ class HandlerTest {
         request.request = new HashMap<>();
         request.request.put("command", "22 текст");
         var response = new Handler().apply(request);
-        assertTrue(response.getResponseText().contains("двадцатьвторого"));
+        assertTrue(response.getResponseText().contains("двадцать второго"));
     }
 
 }

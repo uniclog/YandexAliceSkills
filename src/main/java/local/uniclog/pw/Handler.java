@@ -45,8 +45,8 @@ public class Handler implements Function<Request, Response> {
         return getStartWith(command, event.getText()) + " +ежа в " + answer;
     }
     private static String getStartWith(String command, String answer) {
-         if (command.equals("завтра")) return "завтра";
-         if (command.equals("сегодня")) return  "сегодня";
-         return answer;
+         // if (command.equals("завтра")) return "завтра"
+         // if (command.equals("сегодня")) return  "сегодня"
+         return command.replaceAll("[1-9]+", answer);
     }
 }
