@@ -21,35 +21,33 @@ public class EventMap {
         eventMap.put(7, new DataPair("О", "седьмого"));
         eventMap.put(8, new DataPair("Д", "восьмого"));
         eventMap.put(9, new DataPair("Р", "девятого"));
-        eventMap.put(10, new DataPair("Д","десятого"));
-        eventMap.put(11, new DataPair("Р","одиннадцатого"));
-        eventMap.put(12, new DataPair("О","двенадцатого"));
-        eventMap.put(13, new DataPair("Д","тринадцатого"));
-        eventMap.put(14, new DataPair("О","четырнадцатого"));
-        eventMap.put(15, new DataPair("Д","пятнадцатого"));
-        eventMap.put(16, new DataPair("Р","шестнадцатого"));
-        eventMap.put(17, new DataPair("Д","семнадцатого"));
-        eventMap.put(18, new DataPair("Р","восемнадцатого"));
-        eventMap.put(19, new DataPair("О","девятнадцатого"));
-        eventMap.put(20, new DataPair("Р","двадцатого"));
-        eventMap.put(21, new DataPair("О","двадцать первого"));
-        eventMap.put(22, new DataPair("Д","двадцать второго"));
-        eventMap.put(23, new DataPair("Р","двадцать третьего"));
-        eventMap.put(24, new DataPair("Д","двадцать четвертого"));
-        eventMap.put(25, new DataPair("Р","двадцать пятого"));
-        eventMap.put(26, new DataPair("О","двадцать шестого"));
-        eventMap.put(27, new DataPair("Р","двадцать седьмого"));
-        eventMap.put(28, new DataPair("О","двадцать восьмого"));
-        eventMap.put(29, new DataPair("Д","двадцать девятого"));
-        eventMap.put(30, new DataPair("Р","тридцатого"));
-        eventMap.put(31, new DataPair("Д","тридцать первого"));
+        eventMap.put(10, new DataPair("Д", "десятого"));
+        eventMap.put(11, new DataPair("Р", "одиннадцатого"));
+        eventMap.put(12, new DataPair("О", "двенадцатого"));
+        eventMap.put(13, new DataPair("Д", "тринадцатого"));
+        eventMap.put(14, new DataPair("О", "четырнадцатого"));
+        eventMap.put(15, new DataPair("Д", "пятнадцатого"));
+        eventMap.put(16, new DataPair("Р", "шестнадцатого"));
+        eventMap.put(17, new DataPair("Д", "семнадцатого"));
+        eventMap.put(18, new DataPair("Р", "восемнадцатого"));
+        eventMap.put(19, new DataPair("О", "девятнадцатого"));
+        eventMap.put(20, new DataPair("Р", "двадцатого"));
+        eventMap.put(21, new DataPair("О", "двадцать первого"));
+        eventMap.put(22, new DataPair("Д", "двадцать второго"));
+        eventMap.put(23, new DataPair("Р", "двадцать третьего"));
+        eventMap.put(24, new DataPair("Д", "двадцать четвертого"));
+        eventMap.put(25, new DataPair("Р", "двадцать пятого"));
+        eventMap.put(26, new DataPair("О", "двадцать шестого"));
+        eventMap.put(27, new DataPair("Р", "двадцать седьмого"));
+        eventMap.put(28, new DataPair("О", "двадцать восьмого"));
+        eventMap.put(29, new DataPair("Д", "двадцать девятого"));
+        eventMap.put(30, new DataPair("Р", "тридцатого"));
+        eventMap.put(31, new DataPair("Д", "тридцать первого"));
         return eventMap;
     }
 
-    static Integer parseDay(String request, int dayOfMonth) {
+    static Integer parseDay(String request) {
         Map<String, Integer> map = new LinkedHashMap<>();
-        map.put("сегодня", dayOfMonth);
-        map.put("завтра", dayOfMonth + 1);
         map.put("1", 1);
         map.put("2", 2);
         map.put("3", 3);
