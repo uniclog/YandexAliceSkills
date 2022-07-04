@@ -35,7 +35,7 @@ public class Handler implements Function<Request, Response> {
             default:
                 return "У меня таакой информации нет";
         }
-        return String.join(" ", answerCorrect(command, event.getText()), event.getText(), "+ежа в", answer);
+        return String.join(" ", answerCorrect(command, event.getText()), "+ежа в", answer);
     }
 
     private static void getDayByStartCommand(StringBuilder commandBuilder) {
