@@ -27,9 +27,12 @@ public class Handler implements Function<Request, Response> {
 
     private static String getAnswer(int dayOfMonth, String startWith) {
         var events = EventMap.getEventMap();
-        String event = events.get(dayOfMonth);
+        String event = events.getOrDefault(dayOfMonth, "");
         if (event.equals("")) {
             return startWith +  " вы не работаете ";
+        }
+        if (event.contains("отпуск")) {
+            return startWith + " вы в отпуске";
         }
         return startWith + " вы работаете с " + event;
     }
