@@ -14,14 +14,14 @@ public class EventMap {
         Map<Integer, DataPair> eventMap = new HashMap<>();
         eventMap.put(1, new DataPair("Д", "первого"));
         eventMap.put(2, new DataPair("Р", "второго"));
-        eventMap.put(3, new DataPair("Д", "третьего"));
+        eventMap.put(3, new DataPair("О", "третьего"));
         eventMap.put(4, new DataPair("Р", "четвертого"));
         eventMap.put(5, new DataPair("О", "пятого"));
         eventMap.put(6, new DataPair("Д", "шестого"));
         eventMap.put(7, new DataPair("О", "седьмого"));
         eventMap.put(8, new DataPair("Д", "восьмого"));
         eventMap.put(9, new DataPair("Р", "девятого"));
-        eventMap.put(10, new DataPair("Д", "десятого"));
+        eventMap.put(10, new DataPair("О", "десятого"));
         eventMap.put(11, new DataPair("Р", "одиннадцатого"));
         eventMap.put(12, new DataPair("О", "двенадцатого"));
         eventMap.put(13, new DataPair("Д", "тринадцатого"));
@@ -31,7 +31,7 @@ public class EventMap {
         eventMap.put(17, new DataPair("Д", "семнадцатого"));
         eventMap.put(18, new DataPair("Р", "восемнадцатого"));
         eventMap.put(19, new DataPair("О", "девятнадцатого"));
-        eventMap.put(20, new DataPair("Р", "двадцатого"));
+        eventMap.put(20, new DataPair("Д", "двадцатого"));
         eventMap.put(21, new DataPair("О", "двадцать первого"));
         eventMap.put(22, new DataPair("Д", "двадцать второго"));
         eventMap.put(23, new DataPair("Р", "двадцать третьего"));
