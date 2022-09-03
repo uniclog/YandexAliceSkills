@@ -18,7 +18,7 @@ public class EventMap {
         eventMap.put(4, new DataPair("Р", "четвертого"));
         eventMap.put(5, new DataPair("О", "пятого"));
         eventMap.put(6, new DataPair("Д", "шестого"));
-        eventMap.put(7, new DataPair("О", "седьмого"));
+        eventMap.put(7, new DataPair("Р", "седьмого"));
         eventMap.put(8, new DataPair("Д", "восьмого"));
         eventMap.put(9, new DataPair("Р", "девятого"));
         eventMap.put(10, new DataPair("О", "десятого"));
@@ -28,7 +28,7 @@ public class EventMap {
         eventMap.put(14, new DataPair("О", "четырнадцатого"));
         eventMap.put(15, new DataPair("Д", "пятнадцатого"));
         eventMap.put(16, new DataPair("Р", "шестнадцатого"));
-        eventMap.put(17, new DataPair("Д", "семнадцатого"));
+        eventMap.put(17, new DataPair("О", "семнадцатого"));
         eventMap.put(18, new DataPair("Р", "восемнадцатого"));
         eventMap.put(19, new DataPair("О", "девятнадцатого"));
         eventMap.put(20, new DataPair("Д", "двадцатого"));
@@ -38,7 +38,7 @@ public class EventMap {
         eventMap.put(24, new DataPair("Д", "двадцать четвертого"));
         eventMap.put(25, new DataPair("Р", "двадцать пятого"));
         eventMap.put(26, new DataPair("О", "двадцать шестого"));
-        eventMap.put(27, new DataPair("Р", "двадцать седьмого"));
+        eventMap.put(27, new DataPair("Д", "двадцать седьмого"));
         eventMap.put(28, new DataPair("О", "двадцать восьмого"));
         eventMap.put(29, new DataPair("Д", "двадцать девятого"));
         eventMap.put(30, new DataPair("Р", "тридцатого"));
