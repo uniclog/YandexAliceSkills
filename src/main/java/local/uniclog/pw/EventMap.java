@@ -12,7 +12,7 @@ public class EventMap {
 
     static Map<Integer, DataPair> eventMap() {
         Map<Integer, DataPair> eventMap = new HashMap<>();
-        eventMap.put(1, new DataPair("Д", "первого"));
+        eventMap.put(1, new DataPair("О", "первого"));
         eventMap.put(2, new DataPair("Р", "второго"));
         eventMap.put(3, new DataPair("О", "третьего"));
         eventMap.put(4, new DataPair("Д", "четвертого"));
@@ -22,7 +22,7 @@ public class EventMap {
         eventMap.put(8, new DataPair("Д", "восьмого"));
         eventMap.put(9, new DataPair("Р", "девятого"));
         eventMap.put(10, new DataPair("О", "десятого"));
-        eventMap.put(11, new DataPair("Р", "одиннадцатого"));
+        eventMap.put(11, new DataPair("Д", "одиннадцатого"));
         eventMap.put(12, new DataPair("О", "двенадцатого"));
         eventMap.put(13, new DataPair("Д", "тринадцатого"));
         eventMap.put(14, new DataPair("Р", "четырнадцатого"));
@@ -32,14 +32,14 @@ public class EventMap {
         eventMap.put(18, new DataPair("Р", "восемнадцатого"));
         eventMap.put(19, new DataPair("О", "девятнадцатого"));
         eventMap.put(20, new DataPair("Д", "двадцатого"));
-        eventMap.put(21, new DataPair("О", "двадцать первого"));
+        eventMap.put(21, new DataPair("Р", "двадцать первого"));
         eventMap.put(22, new DataPair("Д", "двадцать второго"));
         eventMap.put(23, new DataPair("Р", "двадцать третьего"));
         eventMap.put(24, new DataPair("О", "двадцать четвертого"));
         eventMap.put(25, new DataPair("Р", "двадцать пятого"));
         eventMap.put(26, new DataPair("О", "двадцать шестого"));
         eventMap.put(27, new DataPair("Д", "двадцать седьмого"));
-        eventMap.put(28, new DataPair("О", "двадцать восьмого"));
+        eventMap.put(28, new DataPair("Р", "двадцать восьмого"));
         eventMap.put(29, new DataPair("Д", "двадцать девятого"));
         eventMap.put(30, new DataPair("Р", "тридцатого"));
         eventMap.put(31, new DataPair("-", "тридцать первого"));
